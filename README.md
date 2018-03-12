@@ -74,7 +74,7 @@ To avoid a bottom border on the ORCID logo.
 
 Ivan Herman, <ivan@w3.org>, 2018
 
-Copyright (c) 2018 W3C® (MIT, ERCIM, Keio, Beihang). See [separate licence](./LICENCE) for details.
+Copyright (c) 2018 W3C® (MIT, ERCIM, Keio, Beihang). See [separate license](./LICENSE) for details.
 
 
 
