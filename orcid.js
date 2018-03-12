@@ -1,11 +1,12 @@
 /**
-* Add an orcid image linked to the authors' and editors' ORCID ID-s (when applicable)
-*
-* The trigger is an additional "orcid" key in the person's object in the respec config. The "w3cid" key is necessary and used as
-* unique identification of the person.
-*
-* @param {object} - respec’s configuration object, expanded from the document’s `respecConfig` structure by respec.
-*/
+ * Add an orcid image linked to the authors' and editors' ORCID ID-s (when applicable)
+ *
+ * The trigger is an additional "orcid" key in the person's object in the respec config. The "w3cid" key is necessary and used as
+ * unique identification of the person.
+ *
+ * @param {object} - respec’s configuration object, expanded from the document’s `respecConfig` structure by respec.
+ *
+ */
 function show_orcid(config) {
 	let orcidmaps = {
 	};
@@ -20,7 +21,7 @@ function show_orcid(config) {
 				if(editor.orcid && editor.w3cid) {
 					orcidmaps[editor.w3cid] = editor.orcid
 				}
-			});					
+			});
 		}
 	});
 
@@ -28,8 +29,8 @@ function show_orcid(config) {
 	// 2nd step: find the persons in the header, see if their id is listed in `orcidmap `and, if yes
 	// add the additional image reference.
 	//
-	// 
-	// Persons are in a <dd> element with the class set to `p-author`. 
+	//
+	// Persons are in a <dd> element with the class set to `p-author`.
 	// The `w3cid` value is stored as an `data-editor-id` attribute value (if present)
 	document.querySelectorAll("dd.p-author").forEach( (element) => {
 		// Look at the data-editor-id value to see if it is relevant.
@@ -51,7 +52,7 @@ function show_orcid(config) {
 				span.setAttribute('class', 'orcid');
 				span.appendChild(a);
 
-				element.innerHTML += " "; 
+				element.innerHTML += " ";
 				element.appendChild(span);
 			}
 		}
